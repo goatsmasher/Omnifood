@@ -35,6 +35,27 @@ html {
 }
 
 /*------------------------*/
+/*Links*/
+/*------------------------*/
+	a,
+	a:link,
+	a:visited {
+		color: #e67e22;
+		text-decoration: none;
+		padding-bottom: 1px;
+		border-bottom: 1px solid #e67e22;
+		-webkit-transition: border-bottom 0.2s, color 0.2s;
+		-moz-transition: border-bottom 0.2s, color 0.2s;
+		transition: border-bottom 0.2s, color 0.2s;
+	}
+
+	a:hover,
+	a:active {
+		color: #555;
+		border-bottom: 1px solid transparent;
+	}
+
+/*------------------------*/
 /*Reusable Components*/
 /*------------------------*/
 
@@ -160,11 +181,17 @@ h3 {
 	width: auto;
 	margin-right: 10px;
 }
+
+.btn-app:link,
+.btn-app:visited {
+	border: 0;
+}
 /*------------------------*/
 /*Header Section*/
 /*------------------------*/
 
 header {
+	background-attachment: fixed;
 	background-image: linear-gradient(rgba(0,0,0,0.4), #000),url(./img/hero.jpg);
 	background-size: cover;
 	background-position: center;
@@ -304,7 +331,6 @@ header {
 	text-align: center;
 	font-size: 125%;
 	padding: 5px;
-	float: left;
 	font-size: 150%;
 	margin-right: 25px;
 }
@@ -326,4 +352,43 @@ header {
 	opacity: 1;
 	transform: scale(1.05);
 	transition: transform 0.5s;
+}
+
+.section-cities h3 {
+	margin-top: 10px;
+}
+
+/*------------------------*/
+/*Testimonials Section*/
+/*------------------------*/
+
+.section-testimonials {
+	background-attachment: fixed;
+	background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,0.8)), url(img/back-customers.jpg);
+	background-size: cover;
+	color: white;
+}
+
+.section-testimonials blockquote {
+	padding: 2px;
+	font-style: italic;
+	line-height: 145%;
+}
+
+.section-testimonials blockquote:before {
+	content: "\201C";
+	font-size: 400%;
+}
+
+.section-testimonials cite {
+	font-size: 90%;
+	margin-top: 25px;
+	display: block;
+}
+
+.section-testimonials cite img {
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+	vertical-align: middle;
 }
